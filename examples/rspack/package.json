@@ -1,0 +1,26 @@
+{
+  "name": "svg-solid-plugin-rspack-example",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "rspack serve",
+    "build": "tsc && rspack build"
+  },
+  "dependencies": {
+    "solid-js": "^1.9.11"
+  },
+  "devDependencies": {
+    "@rspack/cli": "^1.7.10",
+    "@rspack/core": "^1.7.10",
+    "@rspack/dev-server": "^1.2.1",
+    "@svg-solid-plugin/rspack": "workspace:*",
+    "babel-loader": "^10.1.1",
+    "babel-preset-solid": "^1.9.10",
+    "solid-refresh": "^0.7.8",
+    "typescript": "^5.9.3"
+  }
+}
