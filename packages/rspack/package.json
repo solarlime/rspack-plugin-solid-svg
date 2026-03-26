@@ -1,6 +1,6 @@
 {
   "name": "@svg-solid-plugin/rspack",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Universal plugin for transforming SVG files into SolidJS components. Works with both Rspack and Webpack.",
   "author": "solarlime",
   "main": "dist/index.mjs",
