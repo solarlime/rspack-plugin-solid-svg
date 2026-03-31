@@ -47,9 +47,9 @@
     "lint": "pnpm biome check --write .",
     "lint:check": "pnpm biome check .",
     "type-check": "tscw",
-    "test": "node --test",
-    "test:watch": "node --test --watch",
-    "test:coverage": "node --test --experimental-test-coverage",
+    "test": "tsx --test tests/*.test.ts",
+    "test:watch": "tsx --test --watch tests/*.test.ts",
+    "test:coverage": "tsx --test --experimental-test-coverage tests/*.test.ts",
     "changeset": "changeset",
     "release": "changeset publish",
     "prepare": "husky"
@@ -68,6 +68,7 @@
     "lint-staged": "^16.3.4",
     "tscw-config": "^1.1.2",
     "tsdown": "^0.21.4",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "webpack": "^5.105.4"
   },
@@ -87,7 +88,7 @@
     }
   },
   "engines": {
-    "node": ">=24"
+    "node": ">=20"
   },
   "publishConfig": {
     "access": "public"

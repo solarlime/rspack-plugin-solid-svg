@@ -4,17 +4,19 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=24"
+    "node": ">=20"
   },
   "scripts": {
-    "dev": "webpack serve",
-    "build": "tsc && webpack build"
+    "webpack": "node --import ./registerSwcNode.js ./node_modules/webpack-cli/bin/cli.js",
+    "dev": "pnpm webpack serve",
+    "build": "tsc && pnpm webpack build"
   },
   "dependencies": {
     "solid-js": "^1.9.11"
   },
   "devDependencies": {
     "@svg-solid-plugin/rspack": "workspace:*",
+    "@swc-node/register": "^1.11.1",
     "babel-loader": "^10.1.1",
     "babel-preset-solid": "^1.9.10",
     "html-webpack-plugin": "^5.6.6",
