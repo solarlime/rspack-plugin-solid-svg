@@ -1,5 +1,5 @@
-import PluginSvgSolid from '@svg-solid-plugin/rspack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import PluginSvgSolid from 'rspack-plugin-solid-svg';
 
 const config = {
   entry: {

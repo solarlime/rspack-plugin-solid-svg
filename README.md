@@ -1,5 +1,6 @@
-# @svg-solid-plugin/rspack
+# rspack-plugin-solid-svg
 
+![CI](https://github.com/solarlime/rspack-plugin-solid-svg/workflows/CI/badge.svg)
 ![npm version](https://badge.fury.io/js/%40svg-solid-plugin%2Frspack.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D24-brightgreen)
@@ -15,11 +16,11 @@ This plugin allows you to import SVG files to SolidJS components in your webpack
 ## Installation
 
 ```bash
-npm install -D @svg-solid-plugin/rspack
+npm install -D rspack-plugin-solid-svg
 # or
-pnpm add -D @svg-solid-plugin/rspack
+pnpm add -D rspack-plugin-solid-svg
 # or
-yarn add -D @svg-solid-plugin/rspack
+yarn add -D rspack-plugin-solid-svg
 ```
 
 ## Usage
@@ -28,7 +29,7 @@ yarn add -D @svg-solid-plugin/rspack
 
 ```javascript
 // webpack.config.js or rspack.config.js
-import PluginSvgSolid from '@svg-solid-plugin/rspack';
+import PluginSvgSolid from 'rspack-plugin-solid-svg';
 
 export default {
   plugins: [
@@ -190,7 +191,7 @@ The plugin works seamlessly with webpack/rspack:
 
 ```javascript
 // rspack.config.js
-import PluginSvgSolid from '@svg-solid-plugin/rspack';
+import PluginSvgSolid from 'rspack-plugin-solid-svg';
 
 export default {
   // Other settings
@@ -207,7 +208,7 @@ If you need to change the `.svg` resolution behavior, you can use the loader dir
 
 ```javascript
 // webpack.config.js
-import PluginSvgSolid from '@svg-solid-plugin/rspack';
+import PluginSvgSolid from 'rspack-plugin-solid-svg';
 
 export default {
   // Other settings

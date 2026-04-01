@@ -76,9 +76,6 @@ importers:
       '@rspack/dev-server':
         specifier: ^1.2.1
         version: 1.2.1(@rspack/core@1.7.10(@swc/helpers@0.5.20))(tslib@2.8.1)(webpack@5.105.4(@swc/core@1.15.21(@swc/helpers@0.5.20)))
-      '@svg-solid-plugin/rspack':
-        specifier: workspace:*
-        version: link:../..
       '@swc-node/register':
         specifier: ^1.11.1
         version: 1.11.1(@swc/core@1.15.21(@swc/helpers@0.5.20))(@swc/types@0.1.26)(typescript@5.9.3)
@@ -88,6 +85,9 @@ importers:
       babel-preset-solid:
         specifier: ^1.9.10
         version: 1.9.10(@babel/core@7.29.0)(solid-js@1.9.11)
+      rspack-plugin-solid-svg:
+        specifier: workspace:*
+        version: link:../..
       solid-refresh:
         specifier: ^0.7.8
         version: 0.7.8(solid-js@1.9.11)
@@ -101,9 +101,6 @@ importers:
         specifier: ^1.9.11
         version: 1.9.11
     devDependencies:
-      '@svg-solid-plugin/rspack':
-        specifier: workspace:*
-        version: link:../..
       '@swc-node/register':
         specifier: ^1.11.1
         version: 1.11.1(@swc/core@1.15.21(@swc/helpers@0.5.20))(@swc/types@0.1.26)(typescript@5.9.3)
@@ -116,6 +113,9 @@ importers:
       html-webpack-plugin:
         specifier: ^5.6.6
         version: 5.6.6(@rspack/core@1.7.10(@swc/helpers@0.5.20))(webpack@5.105.4)
+      rspack-plugin-solid-svg:
+        specifier: workspace:*
+        version: link:../..
       solid-refresh:
         specifier: ^0.7.8
         version: 0.7.8(solid-js@1.9.11)

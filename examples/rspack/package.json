@@ -1,5 +1,5 @@
 {
-  "name": "svg-solid-plugin-rspack-example",
+  "name": "rspack-plugin-solid-svg-rspack-example",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -18,7 +18,7 @@
     "@rspack/cli": "^1.7.10",
     "@rspack/core": "^1.7.10",
     "@rspack/dev-server": "^1.2.1",
-    "@svg-solid-plugin/rspack": "workspace:*",
+    "rspack-plugin-solid-svg": "workspace:*",
     "@swc-node/register": "^1.11.1",
     "babel-loader": "^10.1.1",
     "babel-preset-solid": "^1.9.10",

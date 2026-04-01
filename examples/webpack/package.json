@@ -1,5 +1,5 @@
 {
-  "name": "svg-solid-plugin-webpack-example",
+  "name": "rspack-plugin-solid-svg-webpack-example",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -15,7 +15,7 @@
     "solid-js": "^1.9.11"
   },
   "devDependencies": {
-    "@svg-solid-plugin/rspack": "workspace:*",
+    "rspack-plugin-solid-svg": "workspace:*",
     "@swc-node/register": "^1.11.1",
     "babel-loader": "^10.1.1",
     "babel-preset-solid": "^1.9.10",
