@@ -7,14 +7,38 @@ updates:
       interval: "weekly"
       day: "tuesday"
       time: "04:00"
+      timezone: "UTC"
     open-pull-requests-limit: 5
-    reviewers:
-      - "solarlime"
-    assignees:
-      - "solarlime"
+    labels:
+      - "dependencies"
     commit-message:
       prefix: "chore"
       include: "scope"
+    groups:
+      production:
+        dependency-type: "production"
+      tooling:
+        dependency-type: "development"
+        patterns:
+          - "@biomejs/*"
+          - "typescript"
+          - "tsx"
+          - "tsdown"
+          - "tscw-config"
+      bundlers:
+        dependency-type: "development"
+        patterns:
+          - "@rspack/*"
+          - "webpack*"
+      release:
+        dependency-type: "development"
+        patterns:
+          - "@changesets/*"
+          - "@commitlint/*"
+          - "husky"
+          - "lint-staged"
+      misc:
+        dependency-type: "development"
 
   # GitHub Actions
   - package-ecosystem: "github-actions"
@@ -23,11 +47,10 @@ updates:
       interval: "weekly"
       day: "tuesday"
       time: "04:00"
+      timezone: "UTC"
     open-pull-requests-limit: 3
-    reviewers:
-      - "solarlime"
-    assignees:
-      - "solarlime"
+    labels:
+      - "dependencies"
     commit-message:
       prefix: "chore"
       include: "scope"
