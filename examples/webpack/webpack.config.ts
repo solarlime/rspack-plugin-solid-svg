@@ -1,5 +1,5 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import PluginSvgSolid from 'rspack-plugin-solid-svg';
+import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg';
 
 const config = {
   entry: {
@@ -35,7 +35,7 @@ const config = {
               presets: ['solid'],
             },
           },
-          PluginSvgSolid.loader,
+          RspackPluginSolidSvg.loader,
         ],
         type: 'javascript/auto',
       },

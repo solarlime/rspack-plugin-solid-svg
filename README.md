@@ -29,11 +29,11 @@ yarn add -D rspack-plugin-solid-svg
 
 ```javascript
 // webpack.config.js or rspack.config.js
-import PluginSvgSolid from 'rspack-plugin-solid-svg';
+import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg';
 
 export default {
   plugins: [
-    new PluginSvgSolid()
+    new RspackPluginSolidSvg()
   ]
 };
 ```
@@ -73,7 +73,7 @@ function App() {
 ### Default Options
 
 ```javascript
-new PluginSvgSolid({
+new RspackPluginSolidSvg({
   svgo: {
     enabled: true,
     svgoConfig: {
@@ -86,7 +86,7 @@ new PluginSvgSolid({
 ### Custom SVGO Configuration
 
 ```javascript
-new PluginSvgSolid({
+new RspackPluginSolidSvg({
   svgo: {
     enabled: true,
     svgoConfig: {
@@ -117,7 +117,7 @@ new PluginSvgSolid({
 ### Disable SVGO
 
 ```javascript
-new PluginSvgSolid({
+new RspackPluginSolidSvg({
   svgo: {
     enabled: false
   }
@@ -191,13 +191,13 @@ The plugin works seamlessly with webpack/rspack:
 
 ```javascript
 // rspack.config.js
-import PluginSvgSolid from 'rspack-plugin-solid-svg';
+import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg';
 
 export default {
   // Other settings
   // ...
   plugins: [
-    new PluginSvgSolid()
+    new RspackPluginSolidSvg()
   ]
 };
 ```
@@ -208,7 +208,7 @@ If you need to change the `.svg` resolution behavior, you can use the loader dir
 
 ```javascript
 // webpack.config.js
-import PluginSvgSolid from 'rspack-plugin-solid-svg';
+import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg';
 
 export default {
   // Other settings
@@ -226,7 +226,7 @@ export default {
             presets: ['solid'],
           },
         },
-        PluginSvgSolid.loader,
+        RspackPluginSolidSvg.loader,
       ],
       type: 'javascript/auto',
     },

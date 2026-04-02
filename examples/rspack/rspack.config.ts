@@ -1,6 +1,6 @@
 import { defineConfig } from '@rspack/cli';
 import { type RspackOptions, rspack } from '@rspack/core';
-import PluginSvgSolid from 'rspack-plugin-solid-svg';
+import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg';
 
 const config: RspackOptions = defineConfig({
   entry: {
@@ -29,7 +29,7 @@ const config: RspackOptions = defineConfig({
     ],
   },
   plugins: [
-    new PluginSvgSolid({
+    new RspackPluginSolidSvg({
       svgo: {
         enabled: true,
         svgoConfig: {
