@@ -12,7 +12,7 @@
     "build": "tsc && pnpm rspack build"
   },
   "dependencies": {
-    "solid-js": "^1.9.11"
+    "solid-js": "^1.9.12"
   },
   "devDependencies": {
     "@rspack/cli": "^1.7.10",

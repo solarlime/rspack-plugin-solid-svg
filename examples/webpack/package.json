@@ -12,7 +12,7 @@
     "build": "tsc && pnpm webpack build"
   },
   "dependencies": {
-    "solid-js": "^1.9.11"
+    "solid-js": "^1.9.12"
   },
   "devDependencies": {
     "rspack-plugin-solid-svg": "workspace:*",
