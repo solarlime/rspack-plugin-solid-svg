@@ -15,13 +15,13 @@
     "solid-js": "^1.9.11"
   },
   "devDependencies": {
-    "@rspack/cli": "^1.7.10",
-    "@rspack/core": "^1.7.10",
+    "@rspack/cli": "^1.7.11",
+    "@rspack/core": "^1.7.11",
     "@rspack/dev-server": "^1.2.1",
     "rspack-plugin-solid-svg": "workspace:*",
     "@swc-node/register": "^1.11.1",
     "babel-loader": "^10.1.1",
-    "babel-preset-solid": "^1.9.10",
+    "babel-preset-solid": "^1.9.12",
     "solid-refresh": "^0.7.8",
     "typescript": "^5.9.3"
   }
