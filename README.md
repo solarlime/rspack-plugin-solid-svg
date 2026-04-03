@@ -1,9 +1,9 @@
 # rspack-plugin-solid-svg
 
 ![CI](https://github.com/solarlime/rspack-plugin-solid-svg/workflows/CI/badge.svg)
-![npm version](https://badge.fury.io/js/%40svg-solid-plugin%2Frspack.svg)
+[![npm version](https://badge.fury.io/js/rspack-plugin-solid-svg.svg)](https://badge.fury.io/js/rspack-plugin-solid-svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Node](https://img.shields.io/badge/node-%3E%3D24-brightgreen)
+![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen)
 
 Webpack/Rspack plugin for transforming SVG files into SolidJS components.
 
@@ -185,24 +185,7 @@ The plugin uses [SVGO](https://github.com/svg/svgo) for SVG optimization. Common
 - Minify SVG code
 - Convert colors to more efficient formats
 
-## Webpack/Rspack Integration
-
-The plugin works seamlessly with webpack/rspack:
-
-```javascript
-// rspack.config.js
-import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg';
-
-export default {
-  // Other settings
-  // ...
-  plugins: [
-    new RspackPluginSolidSvg()
-  ]
-};
-```
-
-### Using loader directly
+## Using loader directly
 
 If you need to change the `.svg` resolution behavior, you can use the loader directly:
 
