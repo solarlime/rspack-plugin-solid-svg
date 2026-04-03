@@ -23,6 +23,6 @@
     "babel-loader": "^10.1.1",
     "babel-preset-solid": "^1.9.10",
     "solid-refresh": "^0.7.8",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.2"
   }
 }
