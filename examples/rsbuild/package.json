@@ -1,0 +1,23 @@
+{
+  "name": "rspack-plugin-solid-svg-rsbuild-example",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "rsbuild dev",
+    "build": "tsc && rsbuild build"
+  },
+  "dependencies": {
+    "solid-js": "^1.9.11"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.7.5",
+    "@rsbuild/plugin-babel": "^1.1.2",
+    "@rsbuild/plugin-solid": "^1.1.1",
+    "rspack-plugin-solid-svg": "workspace:*",
+    "typescript": "^5.9.3"
+  }
+}

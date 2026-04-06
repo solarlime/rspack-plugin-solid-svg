@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:format>image/svg+xml</dc:format>
+      <dc:title>Test Icon</dc:title>
+      <dc:description>This is a test icon with lots of metadata</dc:description>
+    </rdf:RDF>
+  </metadata>
+  <!-- Main circle -->
+  <circle id="helpful" cx="12" cy="12" r="10"/>
+  <!-- Secondary circle -->
+  <circle id="useless" fill="yellow" cx="12" cy="12" r="8"/>
+</svg>
