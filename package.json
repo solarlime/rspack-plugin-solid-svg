@@ -1,7 +1,7 @@
 {
   "name": "rspack-plugin-solid-svg",
   "version": "1.0.1",
-  "description": "Transform SVG files into SolidJS components for Rspack (with Webpack support).",
+  "description": "Transform SVG files into SolidJS components for Rspack and Rsbuild (with Webpack support).",
   "author": "solarlime",
   "type": "module",
   "packageManager": "pnpm@10.32.1",
@@ -34,6 +34,7 @@
     "solid-js",
     "rspack",
     "webpack",
+    "rsbuild",
     "plugin",
     "loader",
     "jsx",
@@ -62,6 +63,7 @@
     "@changesets/cli": "^2.30.0",
     "@commitlint/cli": "^20.4.4",
     "@commitlint/config-conventional": "^20.4.4",
+    "@rsbuild/core": "^1.7.5",
     "@rspack/core": "^1.7.10",
     "@types/node": "^20.0.0",
     "husky": "^9.1.7",
@@ -73,6 +75,7 @@
     "webpack": "^5.105.4"
   },
   "peerDependencies": {
+    "@rsbuild/core": "^1",
     "@rspack/core": "^1",
     "babel-loader": "^10",
     "babel-preset-solid": "^1",
@@ -84,6 +87,9 @@
       "optional": true
     },
     "@rspack/core": {
+      "optional": true
+    },
+    "@rsbuild/core": {
       "optional": true
     }
   },
