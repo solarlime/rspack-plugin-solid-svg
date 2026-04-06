@@ -5,13 +5,13 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen)
 
-Webpack/Rspack plugin for transforming SVG files into SolidJS components.
+Webpack/Rspack/Rsbuild plugin for transforming SVG files into SolidJS components. ESM only.
 
 ## Overview
 
-This plugin allows you to import SVG files to SolidJS components in your webpack/rspack projects. It works in two modes:
-- SVG files imported via `.svg?solid` are transformed into SolidJS components. By default, they are optimized with SVGO.
-- SVG files imported via `.svg` are imported as URLs.
+This plugin allows you to import SVG files to SolidJS components in your webpack/rspack/rsbuild projects. It works in two modes:
+- SVG files added with `.svg?solid` are transformed into SolidJS components. By default, they are optimized with SVGO.
+- SVG files added with `.svg` are imported as URLs (Rspack/Webpack) or use default handling (Rsbuild).
 
 ## Installation
 
@@ -27,9 +27,27 @@ yarn add -D rspack-plugin-solid-svg
 
 ### Basic Setup
 
+#### For Rsbuild
+
 ```javascript
-// webpack.config.js or rspack.config.js
-import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg';
+// rsbuild.config.js
+import { defineConfig } from '@rsbuild/core';
+import { rsbuildPluginSolidSvg } from 'rspack-plugin-solid-svg/rsbuild';
+// or: import { rsbuildPluginSolidSvg } from 'rspack-plugin-solid-svg';
+
+export default defineConfig({
+  plugins: [
+    rsbuildPluginSolidSvg()
+  ]
+});
+```
+
+#### For Rspack/Webpack
+
+```javascript
+// rspack.config.js or webpack.config.js
+import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg/rspack';
+// or: import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg';
 
 export default {
   plugins: [
@@ -70,7 +88,7 @@ function App() {
 
 ## Configuration
 
-### Default Options
+### Rspack/Webpack
 
 ```javascript
 new RspackPluginSolidSvg({
@@ -122,6 +140,27 @@ new RspackPluginSolidSvg({
     enabled: false
   }
 })
+```
+
+### Rsbuild
+
+```javascript
+// rsbuild.config.js
+import { defineConfig } from '@rsbuild/core';
+import { rsbuildPluginSolidSvg } from 'rspack-plugin-solid-svg/rsbuild';
+
+export default defineConfig({
+  plugins: [
+    rsbuildPluginSolidSvg({
+      svgo: {
+        enabled: true,
+        svgoConfig: {
+          plugins: ['removeMetadata', 'removeTitle']
+        }
+      }
+    })
+  ]
+});
 ```
 
 ## Plugin Options
@@ -220,6 +259,66 @@ export default {
     },
   ]
 };
+```
+In Rsbuild it can be reached by modifying the rspack config:
+
+```javascript
+// rsbuild.config.js
+import { defineConfig } from '@rsbuild/core';
+import { pluginBabel } from '@rsbuild/plugin-babel';
+import { pluginSolid } from '@rsbuild/plugin-solid';
+
+import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg';
+
+export default defineConfig({
+  server: {
+    open: false,
+  },
+  plugins: [
+    pluginBabel({
+      include: /\.(?:jsx|tsx)$/,
+      babelLoaderOptions: {
+        presets: ['solid'],
+      },
+    }),
+    pluginSolid(),
+  ],
+  tools: {
+    rspack: {
+      module: {
+        rules: [
+          {
+            test: /\.svg$/,
+            resourceQuery: /\?solid/,
+            use: [
+              {
+                loader: 'babel-loader',
+                options: {
+                  presets: ['solid'],
+                },
+              },
+              {
+                loader: RspackPluginSolidSvg.loader,
+                options: {
+                  svgo: { enabled: false },
+                },
+              },
+            ],
+            type: 'javascript/auto',
+          },
+          {
+            test: /\.svg$/,
+            resourceQuery: { not: [/\?solid/] },
+            type: 'asset/resource',
+            generator: {
+              filename: 'assets/[name].[hash][ext]',
+            },
+          },
+        ],
+      },
+    },
+  },
+});
 ```
 
 ## TypeScript Support
