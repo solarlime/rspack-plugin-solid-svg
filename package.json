@@ -16,21 +16,39 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.mts"
+      "import": {
+        "default": "./dist/index.mjs",
+        "types": "./dist/index.d.mts"
+      },
+      "require": {
+        "default": "./dist/index.cjs",
+        "types": "./dist/index.d.cts"
+      }
     },
     "./rspack": {
-      "import": "./dist/rspack.mjs",
-      "types": "./dist/rspack.d.mts"
+      "import": {
+        "default": "./dist/rspack.mjs",
+        "types": "./dist/rspack.d.mts"
+      },
+      "require": {
+        "default": "./dist/rspack.cjs",
+        "types": "./dist/rspack.d.cts"
+      }
     },
     "./rsbuild": {
-      "import": "./dist/rsbuild.mjs",
-      "types": "./dist/rsbuild.d.mts"
+      "import": {
+        "default": "./dist/rsbuild.mjs",
+        "types": "./dist/rsbuild.d.mts"
+      },
+      "require": {
+        "default": "./dist/rsbuild.cjs",
+        "types": "./dist/rsbuild.d.cts"
+      }
     }
   },
   "sideEffects": false,
-  "main": "dist/index.mjs",
-  "types": "dist/index.d.mts",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "README.md",
