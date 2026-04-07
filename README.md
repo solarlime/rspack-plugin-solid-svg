@@ -5,7 +5,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen)
 
-Webpack/Rspack/Rsbuild plugin for transforming SVG files into SolidJS components. ESM only.
+Webpack/Rspack/Rsbuild plugin for transforming SVG files into SolidJS components.
 
 ## Overview
 
@@ -50,6 +50,20 @@ import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg/rspack';
 // or: import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg';
 
 export default {
+  plugins: [
+    new RspackPluginSolidSvg()
+  ]
+};
+```
+
+or using CommonJS syntax:
+
+```javascript
+// rspack.config.js or webpack.config.js
+const { RspackPluginSolidSvg } = require('rspack-plugin-solid-svg/rspack');
+// or: const { RspackPluginSolidSvg } = require('rspack-plugin-solid-svg');
+
+module.exports = {
   plugins: [
     new RspackPluginSolidSvg()
   ]
@@ -260,7 +274,7 @@ export default {
   ]
 };
 ```
-In Rsbuild it can be reached by modifying the rspack config:
+In Rsbuild it can be reached by modifying the Rspack config:
 
 ```javascript
 // rsbuild.config.js
