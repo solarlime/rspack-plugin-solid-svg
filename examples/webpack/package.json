@@ -2,12 +2,12 @@
   "name": "rspack-plugin-solid-svg-webpack-example",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "webpack": "node --import ./registerSwcNode.js ./node_modules/webpack-cli/bin/cli.js",
+    "webpack": "node --require @swc-node/register ./node_modules/webpack-cli/bin/cli.js",
     "dev": "pnpm webpack serve",
     "build": "tsc && pnpm webpack build"
   },

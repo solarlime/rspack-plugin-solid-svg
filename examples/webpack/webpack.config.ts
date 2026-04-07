@@ -1,9 +1,9 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg/rspack';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { RspackPluginSolidSvg } = require('rspack-plugin-solid-svg/rspack');
 
-// import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg'; // another way
+// const { RspackPluginSolidSvg } = require('rspack-plugin-solid-svg'); // another way
 
-const config = {
+module.exports = {
   entry: {
     main: './src/App.tsx',
   },
@@ -60,5 +60,3 @@ const config = {
     open: false,
   },
 };
-
-export default config;
