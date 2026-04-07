@@ -1,5 +1,11 @@
 # rspack-plugin-solid-svg
 
+## 1.2.0
+
+### Minor Changes
+
+- 56d3d76: Now this plugin is ESM/CJS
+
 ## 1.1.0
 
 ### Minor Changes
