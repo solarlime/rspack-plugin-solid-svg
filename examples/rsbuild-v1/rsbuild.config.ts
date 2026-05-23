@@ -2,6 +2,7 @@ import { defineConfig } from '@rsbuild/core';
 import { pluginBabel } from '@rsbuild/plugin-babel';
 import { pluginSolid } from '@rsbuild/plugin-solid';
 import { rsbuildPluginSolidSvg } from 'rspack-plugin-solid-svg/rsbuild';
+
 // import { rsbuildPluginSolidSvg } from 'rspack-plugin-solid-svg'; // another way
 
 // Docs: https://rsbuild.rs/config/
@@ -10,6 +11,9 @@ export default defineConfig({
     entry: {
       index: './src/App.tsx',
     },
+  },
+  html: {
+    title: 'Solid SVG Plugin Test',
   },
   server: {
     open: false,
@@ -23,8 +27,6 @@ export default defineConfig({
       },
     }),
     pluginSolid(),
-    rsbuildPluginSolidSvg({
-      svgo: { enabled: false },
-    }),
+    rsbuildPluginSolidSvg(),
   ],
 });
