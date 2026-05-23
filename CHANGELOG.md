@@ -1,5 +1,12 @@
 # rspack-plugin-solid-svg
 
+## 1.3.0
+
+### Minor Changes
+
+- Added Rspack 2 support
+- Added Rsbuild 2 support
+
 ## 1.2.0
 
 ### Minor Changes
