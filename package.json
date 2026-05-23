@@ -102,8 +102,8 @@
     "webpack": "^5.105.4"
   },
   "peerDependencies": {
-    "@rsbuild/core": "^1",
-    "@rspack/core": "^1",
+    "@rsbuild/core": "^1 || ^2",
+    "@rspack/core": "^1 || ^2",
     "babel-loader": "^10",
     "babel-preset-solid": "^1",
     "solid-js": "^1",
