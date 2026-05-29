@@ -5,7 +5,7 @@ const { RspackPluginSolidSvg } = require('rspack-plugin-solid-svg/rspack');
 
 module.exports = {
   entry: {
-    main: './src/App.tsx',
+    index: './src/App.tsx',
   },
   output: {
     filename: '[name].bundle.js',
@@ -45,6 +45,9 @@ module.exports = {
         test: /\.svg$/,
         resourceQuery: { not: [/\?solid/] },
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name].[hash][ext]',
+        },
       },
     ],
   },

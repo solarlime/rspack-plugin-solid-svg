@@ -6,7 +6,7 @@ import { RspackPluginSolidSvg } from 'rspack-plugin-solid-svg';
 
 const config: RspackOptions = defineConfig({
   entry: {
-    main: './src/App.tsx',
+    index: './src/App.tsx',
   },
   output: {
     filename: '[name].bundle.js',

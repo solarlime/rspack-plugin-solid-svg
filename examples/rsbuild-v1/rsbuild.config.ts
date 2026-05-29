@@ -12,6 +12,17 @@ export default defineConfig({
       index: './src/App.tsx',
     },
   },
+  output: {
+    filename: {
+      js: '[name].bundle.js',
+      svg: '[name].[hash].svg',
+    },
+    distPath: {
+      js: '',
+      svg: 'assets',
+    },
+    filenameHash: false,
+  },
   html: {
     title: 'Solid SVG Plugin Test',
   },

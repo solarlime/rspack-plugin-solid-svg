@@ -3,7 +3,7 @@ import { describe, test } from 'node:test';
 import type { Config } from 'svgo';
 import { compileSvg, optimizeSvg } from '../src/utils.ts';
 
-describe('Utils', () => {
+describe('utils', () => {
   describe('compileSvg', () => {
     test('should convert simple SVG to JSX', () => {
       const svg = '<svg><circle cx="50" cy="50" r="40" /></svg>';
