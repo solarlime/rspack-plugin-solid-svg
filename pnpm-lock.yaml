@@ -19,7 +19,7 @@ importers:
         version: 1.9.11
       svgo:
         specifier: ^4.0.1
-        version: 4.0.1
+        version: 4.0.2
     devDependencies:
       '@biomejs/biome':
         specifier: 2.4.10
@@ -71,7 +71,7 @@ importers:
     dependencies:
       solid-js:
         specifier: ^1.9.11
-        version: 1.9.11
+        version: 1.9.14
     devDependencies:
       '@rsbuild/core':
         specifier: ^1.7.5
@@ -81,7 +81,7 @@ importers:
         version: 1.1.2(@rsbuild/core@1.7.5)
       '@rsbuild/plugin-solid':
         specifier: ^1.1.1
-        version: 1.1.1(@babel/core@7.29.0)(@rsbuild/core@1.7.5)(solid-js@1.9.11)
+        version: 1.1.1(@babel/core@7.29.0)(@rsbuild/core@1.7.5)(solid-js@1.9.14)
       rspack-plugin-solid-svg:
         specifier: workspace:*
         version: link:../..
@@ -93,7 +93,7 @@ importers:
     dependencies:
       solid-js:
         specifier: ^1.9.11
-        version: 1.9.11
+        version: 1.9.14
     devDependencies:
       '@rsbuild/core':
         specifier: ^2.0.7
@@ -103,7 +103,7 @@ importers:
         version: 1.1.2(@rsbuild/core@2.0.7(core-js@3.47.0))
       '@rsbuild/plugin-solid':
         specifier: ^1.1.1
-        version: 1.1.1(@babel/core@7.29.0)(@rsbuild/core@2.0.7(core-js@3.47.0))(solid-js@1.9.11)
+        version: 1.1.1(@babel/core@7.29.0)(@rsbuild/core@2.0.7(core-js@3.47.0))(solid-js@1.9.14)
       rspack-plugin-solid-svg:
         specifier: workspace:*
         version: link:../..
@@ -115,7 +115,7 @@ importers:
     dependencies:
       solid-js:
         specifier: ^1.9.11
-        version: 1.9.11
+        version: 1.9.14
     devDependencies:
       '@rspack/cli':
         specifier: ^1.7.10
@@ -134,13 +134,13 @@ importers:
         version: 10.1.1(@babel/core@7.29.0)(@rspack/core@1.7.10(@swc/helpers@0.5.21))(webpack@5.105.4(@swc/core@1.15.21(@swc/helpers@0.5.21)))
       babel-preset-solid:
         specifier: ^1.9.10
-        version: 1.9.10(@babel/core@7.29.0)(solid-js@1.9.11)
+        version: 1.9.10(@babel/core@7.29.0)(solid-js@1.9.14)
       rspack-plugin-solid-svg:
         specifier: workspace:*
         version: link:../..
       solid-refresh:
         specifier: ^0.7.8
-        version: 0.7.8(solid-js@1.9.11)
+        version: 0.7.8(solid-js@1.9.14)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -149,7 +149,7 @@ importers:
     dependencies:
       solid-js:
         specifier: ^1.9.11
-        version: 1.9.11
+        version: 1.9.14
     devDependencies:
       '@rspack/cli':
         specifier: ^2.0.4
@@ -168,13 +168,13 @@ importers:
         version: 10.1.1(@babel/core@7.29.0)(@rspack/core@2.0.4(@swc/helpers@0.5.21))(webpack@5.105.4(@swc/core@1.15.21(@swc/helpers@0.5.21)))
       babel-preset-solid:
         specifier: ^1.9.10
-        version: 1.9.10(@babel/core@7.29.0)(solid-js@1.9.11)
+        version: 1.9.10(@babel/core@7.29.0)(solid-js@1.9.14)
       rspack-plugin-solid-svg:
         specifier: workspace:*
         version: link:../..
       solid-refresh:
         specifier: ^0.7.8
-        version: 0.7.8(solid-js@1.9.11)
+        version: 0.7.8(solid-js@1.9.14)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -183,7 +183,7 @@ importers:
     dependencies:
       solid-js:
         specifier: ^1.9.11
-        version: 1.9.11
+        version: 1.9.14
     devDependencies:
       '@swc-node/register':
         specifier: ^1.11.1
@@ -193,7 +193,7 @@ importers:
         version: 10.1.1(@babel/core@7.29.0)(@rspack/core@1.7.10(@swc/helpers@0.5.21))(webpack@5.105.4)
       babel-preset-solid:
         specifier: ^1.9.10
-        version: 1.9.10(@babel/core@7.29.0)(solid-js@1.9.11)
+        version: 1.9.10(@babel/core@7.29.0)(solid-js@1.9.14)
       html-webpack-plugin:
         specifier: ^5.6.6
         version: 5.6.6(@rspack/core@1.7.10(@swc/helpers@0.5.21))(webpack@5.105.4)
@@ -202,7 +202,7 @@ importers:
         version: link:../..
       solid-refresh:
         specifier: ^0.7.8
-        version: 0.7.8(solid-js@1.9.11)
+        version: 0.7.8(solid-js@1.9.14)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -2420,6 +2420,7 @@ packages:
   git-raw-commits@5.0.1:
     resolution: {integrity: sha512-Y+csSm2GD/PCSh6Isd/WiMjNAydu0VBiG9J7EdQsNA5P9uXvLayqjmTsNlK5Gs9IhblFZqOU0yid5Il5JPoLiQ==}
     engines: {node: '>=18'}
+    deprecated: Deprecated and no longer maintained. Use @conventional-changelog/git-client instead.
     hasBin: true
 
   glob-parent@5.1.2:
@@ -3222,8 +3223,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sax@1.5.0:
-    resolution: {integrity: sha512-21IYA3Q5cQf089Z6tgaUTr7lDAyzoTPx5HRtbhsME8Udispad8dC/+sziTNugOEx54ilvatQ9YCzl4KQLPcRHA==}
+  sax@1.6.0:
+    resolution: {integrity: sha512-6R3J5M4AcbtLUdZmRv2SygeVaM7IhrLXu9BmnOGmmACak8fiUtOsYNWUS4uK7upbmHIBbLBeFeI//477BKLBzA==}
     engines: {node: '>=11.0.0'}
 
   schema-utils@4.3.3:
@@ -3260,8 +3261,18 @@ packages:
     peerDependencies:
       seroval: ^1.0
 
+  seroval-plugins@1.5.5:
+    resolution: {integrity: sha512-+BDhqYM6CEn3x09v44dpa9p6974FuUB2dxk+Ctn04k0cO1Zt6QODTXfmEZK0eBaTe/fJBvP4NMGuNJ+R8T+QMg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      seroval: ^1.0
+
   seroval@1.5.1:
     resolution: {integrity: sha512-OwrZRZAfhHww0WEnKHDY8OM0U/Qs8OTfIDWhUD4BLpNJUfXK4cGmjiagGze086m+mhI+V2nD0gfbHEnJjb9STA==}
+    engines: {node: '>=10'}
+
+  seroval@1.5.5:
+    resolution: {integrity: sha512-bSjOuPcwPKLSJNhr9+bZxA20nQxVle5J5MNsYRVE6cIg7KpRLXGupymePavu0jrxlPiPsr4xGZSB8yUY2sH2sw==}
     engines: {node: '>=10'}
 
   serve-index@1.9.2:
@@ -3332,6 +3343,9 @@ packages:
 
   solid-js@1.9.11:
     resolution: {integrity: sha512-WEJtcc5mkh/BnHA6Yrg4whlF8g6QwpmXXRg4P2ztPmcKeHHlH4+djYecBLhSpecZY2RRECXYUwIc/C2r3yzQ4Q==}
+
+  solid-js@1.9.14:
+    resolution: {integrity: sha512-sAEXC0Kk0S1EDg+8ysEWJDbYhA3RRoEjwuySUGlKIemeo0I5YZfOyumNjNs9Sv3y2nmhD+0rW66ag2HsMuQiGQ==}
 
   solid-refresh@0.7.8:
     resolution: {integrity: sha512-iG442T3HXJp5jEebCy8okETrWnmX7CnxNOKrJQVeufh6WXSn+xtLXaptUXXMHTWcRqTJOJwQ8UwzxrRtVFSIzA==}
@@ -3420,8 +3434,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svgo@4.0.1:
-    resolution: {integrity: sha512-XDpWUOPC6FEibaLzjfe0ucaV0YrOjYotGJO1WpF0Zd+n6ZGEQUsSugaoLq9QkEZtAfQIxT42UChcssDVPP3+/w==}
+  svgo@4.0.2:
+    resolution: {integrity: sha512-ekx94z1rRc5LDi6oSUaeRnYhd0UOJxdtQCL2rF8xpWxD3TPAsISWOrxezqGovqS38GRZOdpDfvQe3ts6F7nsng==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -4886,11 +4900,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@rsbuild/plugin-solid@1.1.1(@babel/core@7.29.0)(@rsbuild/core@1.7.5)(solid-js@1.9.11)':
+  '@rsbuild/plugin-solid@1.1.1(@babel/core@7.29.0)(@rsbuild/core@1.7.5)(solid-js@1.9.14)':
     dependencies:
       '@rsbuild/plugin-babel': 1.1.2(@rsbuild/core@1.7.5)
-      babel-preset-solid: 1.9.10(@babel/core@7.29.0)(solid-js@1.9.11)
-      solid-refresh: 0.7.8(solid-js@1.9.11)
+      babel-preset-solid: 1.9.10(@babel/core@7.29.0)(solid-js@1.9.14)
+      solid-refresh: 0.7.8(solid-js@1.9.14)
     optionalDependencies:
       '@rsbuild/core': 1.7.5
     transitivePeerDependencies:
@@ -4898,11 +4912,11 @@ snapshots:
       - solid-js
       - supports-color
 
-  '@rsbuild/plugin-solid@1.1.1(@babel/core@7.29.0)(@rsbuild/core@2.0.7(core-js@3.47.0))(solid-js@1.9.11)':
+  '@rsbuild/plugin-solid@1.1.1(@babel/core@7.29.0)(@rsbuild/core@2.0.7(core-js@3.47.0))(solid-js@1.9.14)':
     dependencies:
       '@rsbuild/plugin-babel': 1.1.2(@rsbuild/core@2.0.7(core-js@3.47.0))
-      babel-preset-solid: 1.9.10(@babel/core@7.29.0)(solid-js@1.9.11)
-      solid-refresh: 0.7.8(solid-js@1.9.11)
+      babel-preset-solid: 1.9.10(@babel/core@7.29.0)(solid-js@1.9.14)
+      solid-refresh: 0.7.8(solid-js@1.9.14)
     optionalDependencies:
       '@rsbuild/core': 2.0.7(core-js@3.47.0)
     transitivePeerDependencies:
@@ -5512,7 +5526,7 @@ snapshots:
       find-up: 5.0.0
     optionalDependencies:
       '@rspack/core': 1.7.10(@swc/helpers@0.5.21)
-      webpack: 5.105.4
+      webpack: 5.105.4(@swc/core@1.15.21(@swc/helpers@0.5.21))(webpack-cli@7.0.2)
 
   babel-loader@10.1.1(@babel/core@7.29.0)(@rspack/core@2.0.4(@swc/helpers@0.5.21))(webpack@5.105.4(@swc/core@1.15.21(@swc/helpers@0.5.21))):
     dependencies:
@@ -5537,6 +5551,13 @@ snapshots:
       babel-plugin-jsx-dom-expressions: 0.40.5(@babel/core@7.29.0)
     optionalDependencies:
       solid-js: 1.9.11
+
+  babel-preset-solid@1.9.10(@babel/core@7.29.0)(solid-js@1.9.14):
+    dependencies:
+      '@babel/core': 7.29.0
+      babel-plugin-jsx-dom-expressions: 0.40.5(@babel/core@7.29.0)
+    optionalDependencies:
+      solid-js: 1.9.14
 
   baseline-browser-mapping@2.10.7: {}
 
@@ -6921,7 +6942,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sax@1.5.0: {}
+  sax@1.6.0: {}
 
   schema-utils@4.3.3:
     dependencies:
@@ -6968,7 +6989,13 @@ snapshots:
     dependencies:
       seroval: 1.5.1
 
+  seroval-plugins@1.5.5(seroval@1.5.5):
+    dependencies:
+      seroval: 1.5.5
+
   seroval@1.5.1: {}
+
+  seroval@1.5.5: {}
 
   serve-index@1.9.2:
     dependencies:
@@ -7065,11 +7092,17 @@ snapshots:
       seroval: 1.5.1
       seroval-plugins: 1.5.1(seroval@1.5.1)
 
-  solid-refresh@0.7.8(solid-js@1.9.11):
+  solid-js@1.9.14:
+    dependencies:
+      csstype: 3.2.3
+      seroval: 1.5.5
+      seroval-plugins: 1.5.5(seroval@1.5.5)
+
+  solid-refresh@0.7.8(solid-js@1.9.14):
     dependencies:
       '@babel/generator': 7.29.1
       '@babel/types': 7.29.0
-      solid-js: 1.9.11
+      solid-js: 1.9.14
 
   source-map-js@1.2.1: {}
 
@@ -7159,7 +7192,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svgo@4.0.1:
+  svgo@4.0.2:
     dependencies:
       commander: 11.1.0
       css-select: 5.2.2
@@ -7167,7 +7200,7 @@ snapshots:
       css-what: 6.2.2
       csso: 5.0.5
       picocolors: 1.1.1
-      sax: 1.5.0
+      sax: 1.6.0
 
   tapable@2.3.0: {}
 
